@@ -1,0 +1,22 @@
+<!-- Formulário de login-->
+<form class="col-sm-12 form-signin" name="form" method="POST" action="#">
+  <div class="bg container">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-bold text-white text-center">Meu Pokémon Favorito</h1>
+    </div>
+  </div>
+<!-- Usuário -->
+<div class="campos container">
+  <div class="form-label-group">
+    <h3>Usuário:</h3>
+      <input type="text" name="nome" id="usuario" class="form-control" required placeholder="usuario" oninvalid="setCustomValidity('O campo usuário é obrigatório!')" oninput="setCustomValidity('')"/>
+  </div>
+<!-- Senha -->
+  <div class="form-label-group">
+    <h3>Senha:</h3>
+      <input type="Senha" id="senha" class="form-control" placeholder="Senha"oninvalid="setCustomValidity('Digite sua senha.')" oninput="setCustomValidity('')"/>
+  </div>
+<!-- Botão Login --> 
+  <button class="btn btn-primary " type="submit">Login</button>
+</div>
+</form>
