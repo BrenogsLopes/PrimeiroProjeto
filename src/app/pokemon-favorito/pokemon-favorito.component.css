@@ -1,0 +1,15 @@
+.container{
+  max-width: 400px;
+  margin: 0 auto;
+}
+a{
+ text-decoration: none;
+}
+.row{
+  height: 60px;
+  padding-top: 10px;
+}
+
+.bg-pokemon{
+  background: rgb(46, 159, 228);
+}
