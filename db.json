@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "user": "breno@breno",
+      "password": "12345",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      " ": 1,
+      " ": " ",
+      " ": 1
+    }
+  ],
+  "profile": {
+    "": " "
+  }
+}

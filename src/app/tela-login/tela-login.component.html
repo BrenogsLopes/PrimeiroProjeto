@@ -1,22 +1,29 @@
 <!-- Formulário de login-->
-<form class="col-sm-12 form-signin" name="form" method="POST" action="#" >
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" class="col-sm-12 form-signin" method="POST">
   <div class="bg container">
     <div class="text-center mb-4">
       <h1 class="h3 mb-3 font-weight-bold text-white text-center">Meu Pokémon Favorito</h1>
     </div>
   </div>
 <!-- Usuário -->
-<div class="campos container">
-  <div class="form-label-group">
-    <h3>Usuário:</h3>
-      <input type="text" name="nome" id="usuario" class="form-control" required placeholder="usuario" oninvalid="setCustomValidity('O campo usuário é obrigatório!')" oninput="setCustomValidity('')"/>
-  </div>
+  <div class="campos container">
+    <div class="form-group" [class.has-error]="!nome.valid && nome.touched" [class.has-feedback]="!nome.valid && nome.touched">
+      <label for="nome" class="control-label">Usuário</label>
+      <input type="email" name="nome" id="nome" class="form-control " [(ngModel)]="usuario.nome" required #nome="ngModel">
+      <div *ngIf="!nome.valid && nome.touched" class="alert alert-danger" role="alert">
+        O campo usuário é obrigatório.
+      </div>
+    </div>
 <!-- Senha -->
-  <div class="form-label-group">
-    <h3>Senha:</h3>
-      <input type="Senha" id="senha" class="form-control" placeholder="Senha"oninvalid="setCustomValidity('Digite sua senha.')" oninput="setCustomValidity('')"/>
+    <div class="form-group" [class.has-error]="!password.valid && password.touched" [class.has-feedback]="!password.valid && password.touched">
+      <label for="password" class="control-label">Senha</label>
+      <input name="senha" type="password" id="password" class="form-control" [(ngModel)]="usuario.senha" required
+        #password="ngModel">
+      <div *ngIf="!password.valid && password.touched" class="alert alert-danger" role="alert">
+        Digite sua senha.
+      </div>
+    </div>
+<!-- Botão Login -->
+    <button class="btn btn-primary " type="submit" [disabled]="!f.valid">Login</button>
   </div>
-<!-- Botão Login --> 
-  <button class="btn btn-primary " type="submit">Login</button>
-</div>
 </form>
