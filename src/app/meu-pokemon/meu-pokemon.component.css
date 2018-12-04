@@ -10,6 +10,7 @@ a{
   padding-top: 10px;
 }
 
-.bg-pokemon{
-  background: rgb(46, 159, 228);
-}
+.bg-pokemon{ 
+    background: rgb(46, 159, 228); width: 100%; max-width: 500px; margin: 0 auto; height: 50px; padding: 0.7rem;
+    font-weight: bold; font-size: 1.3em;
+  }

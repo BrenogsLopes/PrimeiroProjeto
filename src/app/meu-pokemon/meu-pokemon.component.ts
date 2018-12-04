@@ -1,4 +1,4 @@
-import { HttpModule } from '@angular/http';
+
 import { HttpClient } from '@angular/common/http';
 
 import { Component, OnInit } from '@angular/core';
@@ -14,8 +14,3 @@ export class MeuPokemonComponent implements OnInit {
   myPokemon: any = '';
 
   constructor(private httClient: HttpClient) { }
-
-
-
-  ngOnInit() {
-  }
