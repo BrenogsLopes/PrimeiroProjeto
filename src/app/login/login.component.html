@@ -1,0 +1,33 @@
+<h5 class="title-bg text-white text-center">Meu Pokémon Favorito</h5>
+
+<form #myForm="ngForm">
+  <!--
+    ---------------------     USUÁRIO   --------------------------------------------
+  -->
+  <section class="campos container">
+    <div class="form-group">
+      <label for="user">Usuário</label>
+      <input type="text" id="user" class="form-control" name="user" [(ngModel)]="usuario.userName" required #nome="ngModel" />
+      <div *ngIf="!nome.valid && nome.touched" class="alert">
+        O campo usuário é obrigatório.
+      </div>
+    </div>
+
+    <!--
+    ---------------------      SENHA     --------------------------------------------
+  -->
+
+    <div class="form-group">
+      <label for="password">Senha</label>
+      <input type="password" id="password" class="form-control" name="senha" [(ngModel)]="usuario.password" required
+        #senha="ngModel" />
+      <div *ngIf="!senha.valid && senha.touched" class="alert">
+        Digite sua senha.
+      </div>
+    </div>
+
+    <button class="btn btn-primary type=" submit (click)="fazerLogin()" [disabled]="!myForm.valid">
+      Login
+    </button>
+  </section>
+</form>

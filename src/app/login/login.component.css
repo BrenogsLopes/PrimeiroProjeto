@@ -1,0 +1,20 @@
+.title-bg{
+  background: rgb(46, 159, 228); width: 100%; max-width: 500px; margin: 0 auto; height: 50px; padding: 0.7rem;
+  font-weight: bold; font-size: 1.3em;
+}
+.ng-invalid.ng-touched:not(form) {
+  border: 1px solid red;
+}
+.alert{
+  color: red;
+}
+.btn{
+  width: 90px; border-radius: 0; background: #2e9fe4; height: 28px; margin-top: 10px; padding: initial;
+}
+.form-control {
+  border-radius: 0;
+}
+.campos{
+  width: 100%; max-width: 350px; margin: 0 auto; margin-top: 100px; border: 1px solid #ccc;
+  padding: 45px; border-radius: 5px;
+}

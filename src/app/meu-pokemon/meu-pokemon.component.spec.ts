@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TelaLoginComponent } from './tela-login.component';
+import { MeuPokemonComponent } from './meu-pokemon.component';
 
-describe('TelaLoginComponent', () => {
-  let component: TelaLoginComponent;
-  let fixture: ComponentFixture<TelaLoginComponent>;
+describe('MeuPokemonComponent', () => {
+  let component: MeuPokemonComponent;
+  let fixture: ComponentFixture<MeuPokemonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TelaLoginComponent ]
+      declarations: [ MeuPokemonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TelaLoginComponent);
+    fixture = TestBed.createComponent(MeuPokemonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

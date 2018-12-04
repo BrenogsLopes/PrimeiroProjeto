@@ -1,10 +1,6 @@
 {
-  "posts": [
-    {
-      "user": "breno@breno",
-      "password": "12345",
-      "author": "typicode"
-    }
+  "MeuPokemon": [
+    { "user": "trainer@pokemon.com", "password": "p0k3l1f3" }
   ],
   "comments": [
     {

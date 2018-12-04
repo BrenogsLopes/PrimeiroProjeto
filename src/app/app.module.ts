@@ -1,13 +1,20 @@
-
+import { Http, HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TelaLoginComponent } from './tela-login/tela-login.component';
-import { PokemonFavoritoComponent } from './pokemon-favorito/pokemon-favorito.component';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth/auth.service';
+import { MeuPokemonComponent } from './meu-pokemon/meu-pokemon.component';
+import { Usuario } from './login/usuario';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
+
+
 
 
 
@@ -15,19 +22,25 @@ import { PokemonFavoritoComponent } from './pokemon-favorito/pokemon-favorito.co
 @NgModule({
   declarations: [
     AppComponent,
-    TelaLoginComponent,
-    PokemonFavoritoComponent,
-
-
+    LoginComponent,
+    MeuPokemonComponent,
+    PaginaNaoEncontradaComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HttpModule
+
 
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    Usuario,
+    Http,
+    HttpClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
